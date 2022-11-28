@@ -47,10 +47,13 @@ const validateFunc = () => {
     return errorMsg;
 };
 
-form.onsubmit = () => {
+form.onsubmit = (e) => {
     const errorMsg = validateFunc();
     if (errorMsg) {
         alert(errorMsg);
         return false;
     }
+
+    alert('success');
+    e.preventDefault()
 };
